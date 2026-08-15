@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="logo.png" />
 
-    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
 
-    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
 
-    <link rel="apple-touch-icon" href="logo.png" />
+<link rel="apple-touch-icon" href="logo.png" />
 
-    <link rel="manifest" href="manifest.json" />
+<link rel="manifest" href="manifest.json" />
 
-    <meta name="theme-color" content="#ffc107" />
+<meta name="theme-color" content="#ffc107" />
   </head>
 
   <body>
@@ -33,6 +33,26 @@
       setTimeout(() => {
         window.location.href = "onboarding.html";
       }, 3000);
+    </script>
+    <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker
+        .register("./sw.js")
+        .then(function (registration) {
+          console.log(
+            "Fast MTN Service Worker registered:",
+            registration.scope,
+          );
+        })
+        .catch(function (error) {
+          console.error(
+            "Fast MTN Service Worker registration failed:",
+            error,
+          );
+        });
+    });
+  }
     </script>
   </body>
 </html>
