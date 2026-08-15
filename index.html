@@ -31,30 +31,11 @@
 
       <small>Loading...</small>
     </div>
-    <script>
+    <script src="pwa.js"></script>
+    <script>  
       setTimeout(() => {
         window.location.href = "onboarding.html";
       }, 3000);
-    </script>
-    <script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-      navigator.serviceWorker
-        .register("./sw.js")
-        .then(function (registration) {
-          console.log(
-            "Fast MTN Service Worker registered:",
-            registration.scope,
-          );
-        })
-        .catch(function (error) {
-          console.error(
-            "Fast MTN Service Worker registration failed:",
-            error,
-          );
-        });
-    });
-  }
     </script>
   </body>
 </html>
