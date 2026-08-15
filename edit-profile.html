@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Edit Profile</title>
+
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="header">
+        <a href="profile.html" class="back">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h2>Edit Profile</h2>
+      </div>
+
+      <div class="edit-container">
+        <div class="avatar">
+          <img id="profileImage" src="images/avatar.png" />
+
+          <input type="file" id="imageInput" accept="image/*" hidden />
+
+          <label for="imageInput" class="camera-btn">
+            <i class="fa-solid fa-camera"></i>
+          </label>
+        </div>
+
+        <div class="input-group">
+          <label>Full Name</label>
+
+          <input type="text" id="fullName" />
+        </div>
+
+        <div class="input-group">
+          <label>Phone Number</label>
+
+          <input type="tel" id="phone" />
+        </div>
+
+        <button id="saveBtn">Save Changes</button>
+      </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/edit-profile.js"></script>
+  </body>
+</html>

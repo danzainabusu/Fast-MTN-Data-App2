@@ -1,0 +1,543 @@
+/* ============================================
+   FAST MTN DATA - SPLASH & ONBOARDING
+   FULLY RESPONSIVE
+============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: #ffcc00;
+}
+
+/* ============================================
+   SPLASH SCREEN
+============================================ */
+
+.splash {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 25px;
+
+  background: #ffcc00;
+}
+
+.logo {
+  width: clamp(100px, 35vw, 180px);
+  max-width: 100%;
+  height: auto;
+
+  margin-bottom: 25px;
+}
+
+.splash p {
+  font-size: clamp(15px, 4vw, 20px);
+  font-weight: bold;
+
+  margin-bottom: 30px;
+}
+
+.loader {
+  width: clamp(35px, 10vw, 48px);
+  height: clamp(35px, 10vw, 48px);
+
+  border: clamp(4px, 1vw, 5px) solid #fff;
+  border-top-color: #000;
+
+  border-radius: 50%;
+
+  margin: 0 auto;
+
+  animation: spin 1s linear infinite;
+}
+
+.splash small {
+  display: block;
+
+  margin-top: 14px;
+
+  font-size: clamp(11px, 3vw, 14px);
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   ONBOARDING PHONE
+============================================ */
+
+.phone {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  background: #fff;
+
+  padding: max(20px, env(safe-area-inset-top))
+    max(20px, env(safe-area-inset-right)) max(25px, env(safe-area-inset-bottom))
+    max(20px, env(safe-area-inset-left));
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-x: hidden;
+}
+
+/* ============================================
+   TOP BAR
+============================================ */
+
+.top-bar {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 55px;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+
+  text-decoration: none;
+  color: #000;
+
+  font-size: clamp(28px, 8vw, 40px);
+  font-weight: bold;
+
+  border-radius: 50%;
+}
+
+.back:active {
+  background: #f2f2f2;
+}
+
+/* ============================================
+   SMALL LOGO
+============================================ */
+
+.small-logo {
+  width: clamp(110px, 35vw, 200px);
+
+  max-width: 60%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* ============================================
+   HERO
+============================================ */
+
+.hero {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: clamp(20px, 7vw, 50px) 0;
+
+  flex: 0 0 auto;
+}
+
+.rocket {
+  width: clamp(160px, 60vw, 300px);
+
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* ============================================
+   CONTENT
+============================================ */
+
+.phone h1 {
+  width: 100%;
+
+  font-size: clamp(25px, 7vw, 38px);
+
+  line-height: 1.15;
+
+  margin-bottom: 15px;
+
+  color: #111;
+}
+
+.desc {
+  width: 100%;
+
+  max-width: 650px;
+
+  color: #666;
+
+  font-size: clamp(14px, 4vw, 18px);
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+/* ============================================
+   DOTS
+============================================ */
+
+.dots {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 25px;
+}
+
+.dots span {
+  width: 9px;
+  height: 9px;
+
+  background: #ddd;
+
+  border-radius: 50%;
+
+  transition: 0.2s;
+}
+
+.dots .active {
+  background: #ffc107;
+
+  width: 11px;
+  height: 11px;
+}
+
+/* ============================================
+   BUTTON
+============================================ */
+
+.btn {
+  width: 100%;
+
+  min-height: 52px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #111;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  text-align: center;
+
+  padding: 15px 20px;
+
+  border-radius: 14px;
+
+  font-size: clamp(15px, 4vw, 18px);
+
+  font-weight: bold;
+
+  margin-top: auto;
+
+  transition:
+    transform 0.15s ease,
+    background 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ============================================
+   VERY SMALL PHONES
+   320px - 359px
+============================================ */
+
+@media (max-width: 359px) {
+  .phone {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .top-bar {
+    min-height: 45px;
+  }
+
+  .back {
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+  }
+
+  .hero {
+    margin: 15px 0 25px;
+  }
+
+  .rocket {
+    width: 170px;
+  }
+
+  .phone h1 {
+    font-size: 25px;
+  }
+
+  .desc {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .btn {
+    min-height: 50px;
+    padding: 13px;
+  }
+}
+
+/* ============================================
+   NORMAL PHONES
+   360px - 599px
+============================================ */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .hero {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .rocket {
+    width: min(65vw, 280px);
+  }
+}
+
+/* ============================================
+   LARGE PHONES / SMALL TABLETS
+   600px - 767px
+============================================ */
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .phone {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hero {
+    margin: 35px 0;
+  }
+
+  .rocket {
+    width: 280px;
+  }
+
+  .desc {
+    max-width: 600px;
+  }
+
+  .btn {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ============================================
+   TABLETS
+   768px - 1023px
+============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background: #f3f3f3;
+  }
+
+  .phone {
+    width: 100%;
+    max-width: 760px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 35px 50px;
+  }
+
+  .hero {
+    margin: 45px 0;
+  }
+
+  .rocket {
+    width: 320px;
+  }
+
+  .phone h1 {
+    font-size: 38px;
+  }
+
+  .desc {
+    font-size: 18px;
+  }
+
+  .btn {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ============================================
+   DESKTOP / LAPTOP
+   1024px+
+============================================ */
+
+@media (min-width: 1024px) {
+  body {
+    background: #f3f3f3;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .phone {
+    width: 100%;
+
+    max-width: 850px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 40px 60px;
+  }
+
+  .hero {
+    margin: 40px 0;
+  }
+
+  .rocket {
+    width: 320px;
+  }
+
+  .phone h1 {
+    font-size: 40px;
+  }
+
+  .desc {
+    font-size: 18px;
+    max-width: 700px;
+  }
+
+  .btn {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ============================================
+   LARGE DESKTOP
+   1400px+
+============================================ */
+
+@media (min-width: 1400px) {
+  .phone {
+    max-width: 900px;
+
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .rocket {
+    width: 350px;
+  }
+}
+
+/* ============================================
+   LANDSCAPE PHONES
+============================================ */
+
+@media (max-height: 550px) and (orientation: landscape) {
+  .phone {
+    min-height: 100vh;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .top-bar {
+    min-height: 40px;
+  }
+
+  .hero {
+    margin: 10px 0;
+  }
+
+  .rocket {
+    width: 150px;
+  }
+
+  .phone h1 {
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+
+  .desc {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .dots {
+    margin-bottom: 12px;
+  }
+
+  .btn {
+    min-height: 45px;
+    padding: 10px;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

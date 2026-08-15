@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Transaction History</title>
+
+<link rel="stylesheet" href="css/transactions.css">
+  <link rel="stylesheet" href="css/utils.css" />
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <link rel="icon" type="image/png" href="logo.png">
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="logo.png"
+/>
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="512x512"
+  href="logo.png"
+/>
+
+<link
+  rel="apple-touch-icon"
+  href="logo.png"
+/>
+
+<link
+  rel="manifest"
+  href="manifest.json"
+/>
+
+<meta
+  name="theme-color"
+  content="#ffc107"
+/>
+</head>
+<body>
+
+<div class="app">
+
+<header>
+
+<a href="dashboard.html">
+<i class="fa-solid fa-arrow-left"></i>
+</a>
+
+<h2>Transaction History</h2>
+
+</header>
+
+<div class="tabs">
+
+    <button class="tab active" data-filter="all">All</button>
+
+    <button class="tab" data-filter="data">Data</button>
+
+    <button class="tab" data-filter="airtime">Airtime</button>
+
+    <button class="tab" data-filter="wallet">Wallet</button>
+
+  <button class="tab" data-filter="convert">Convert</button>
+  <button class="tab" data-filter="withdraw">withdrawal</button>
+
+</div>
+
+<div id="transactionList"></div>
+
+<script src="js/utils.js"></script>
+<script src="js/transactions.js"></script>
+</body>
+</html>

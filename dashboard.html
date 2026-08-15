@@ -1,0 +1,154 @@
+<!doctype html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/transactions.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+  <body>
+    <!-- =====================================
+     FAST MTN PAGE LOADER
+===================================== -->
+    <div id="pageLoader">
+      <div class="loaderWrapper">
+        <!-- Rotating border -->
+        <div class="loaderBorder"></div>
+
+        <!-- Logo stays still -->
+        <img src="logo.png" alt="Fast MTN" class="loaderLogo" />
+      </div>
+    </div>
+
+    <div class="phone">
+      <!-- Header -->
+
+      <div class="top">
+        <div>
+          <h3 id="welcomeName">Hello</h3>
+
+          <small id="welcomePhone"></small>
+        </div>
+
+        <a href="notifications-center.html" class="bell">
+          <i class="fa-regular fa-bell"></i>
+          <span id="notificationCount" class="badge">0</span>
+        </a>
+      </div>
+
+      <!-- Wallet -->
+
+      <div class="wallet">
+        <div>
+          <small>Wallet Balance</small>
+
+          <h2 id="walletBalance">₦0.00</h2>
+        </div>
+
+        <button
+          onclick="location.href = 'fund-wallet.html'"
+          data-href="fund-wallet.html"
+        >
+          + Fund Wallet
+        </button>
+      </div>
+
+      <!-- Quick Actions -->
+
+      <h4>Quick Actions</h4>
+
+      <div class="actions">
+        <a href="bundles.html">
+          <i class="fa-solid fa-wifi"></i>
+          <span>Buy Data</span>
+        </a>
+
+        <a href="airtime.html">
+          <i class="fa-solid fa-phone"></i>
+          <span>Airtime</span>
+        </a>
+
+        <a href="airtime-cash.html">
+          <i class="fa-solid fa-money-bill-transfer"></i>
+          <span>Airtime to Cash</span>
+        </a>
+
+        <a href="transactions.html">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <span>History</span>
+        </a>
+      </div>
+
+      <!-- Popular Bundles -->
+
+      <div class="section">
+        <h4>Popular Data Bundles</h4>
+        <div class="plans" id="popularPlans"></div>
+      </div>
+
+      <!--recent transactions-->
+
+      <div class="recent-transactions">
+        <div class="head">
+          <p>Recent Transactions</p>
+          <b onclick="location.href = 'transactions.html'">View All</b>
+        </div>
+        <div id="transactionList" class="transaction-list"></div>
+      </div>
+
+      <!-- Bottom Navigation -->
+
+      <div class="bottom-nav">
+        <a class="active">
+          <i class="fa-solid fa-house"></i>
+          Home
+        </a>
+
+        <a href="bundles.html">
+          <i class="fa-solid fa-layer-group"></i>
+          Bundles
+        </a>
+
+        <a href="wallet.html">
+          <i class="fa-solid fa-wallet"></i>
+          Wallet
+        </a>
+
+        <a href="transactions.html">
+          <i class="fa-solid fa-clock"></i>
+          History
+        </a>
+
+        <a href="profile.html">
+          <i class="fa-solid fa-user"></i>
+          Profile
+        </a>
+      </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

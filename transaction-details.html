@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Transaction Details</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/transaction-details.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- HEADER -->
+      <header class="header">
+        <button class="back-btn" onclick="history.back()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <h2>Transaction Details</h2>
+
+        <div class="support-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main class="content">
+        <!-- TRANSACTION SUMMARY -->
+        <section class="summary-card">
+          <h3 id="transactionTitle">Transaction</h3>
+
+          <h1 id="transactionAmount">₦0</h1>
+
+          <div id="transactionStatus" class="main-status pending">Pending</div>
+
+          <!-- PROGRESS -->
+          <div class="progress">
+            <!-- STEP 1 -->
+            <div class="step completed">
+              <div class="circle">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <p>
+                Payment<br />
+                successful
+              </p>
+            </div>
+
+            <div class="line"></div>
+
+            <!-- STEP 2 -->
+            <div id="processingStep" class="step processing">
+              <div class="circle">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+
+              <p>
+                Processing<br />
+                by Team
+              </p>
+            </div>
+
+            <div class="line"></div>
+
+            <!-- STEP 3 -->
+            <div id="receivedStep" class="step">
+              <div class="circle">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <p>
+                Received<br />
+                by Team
+              </p>
+            </div>
+          </div>
+
+          <p id="transactionDate" class="transaction-date"></p>
+
+          <div class="notice">
+            <i class="fa-solid fa-circle-info"></i>
+
+            <span id="noticeText">
+              Your transaction is being processed by our team.
+            </span>
+          </div>
+        </section>
+
+        <!-- DETAILS -->
+        <section class="details-card">
+          <h3>Transaction Details</h3>
+
+          <div class="detail-row">
+            <span>Transaction Type</span>
+
+            <strong id="detailType"> - </strong>
+          </div>
+
+          <div class="detail-row">
+            <span>Transaction No.</span>
+
+            <strong id="detailId"> - </strong>
+          </div>
+
+          <div id="detailPhoneRow" class="detail-row">
+            <span>Phone Number</span>
+
+            <strong id="detailPhone"> - </strong>
+          </div>
+
+          <div id="detailNetworkRow" class="detail-row">
+            <span>Network</span>
+
+            <strong id="detailNetwork"> - </strong>
+          </div>
+
+          <div id="detailBundleRow" class="detail-row">
+            <span>Bundle</span>
+
+            <strong id="detailBundle"> - </strong>
+          </div>
+
+          <div id="detailBankRow" class="detail-row">
+            <span>Bank</span>
+
+            <strong id="detailBank"> - </strong>
+          </div>
+
+          <div id="detailAccountRow" class="detail-row">
+            <span>Account Number</span>
+
+            <strong id="detailAccount"> - </strong>
+          </div>
+
+          <div id="detailAccountNameRow" class="detail-row">
+            <span>Account Name</span>
+
+            <strong id="detailAccountName"> - </strong>
+          </div>
+
+          <div class="detail-row">
+            <span>Payment Date</span>
+
+            <strong id="detailDate"> - </strong>
+          </div>
+
+          <div class="detail-row">
+            <span>Status</span>
+
+            <strong id="detailStatus"> Pending </strong>
+          </div>
+        </section>
+
+        <!-- BUTTONS -->
+        <div class="action-buttons">
+          <button class="report-btn" onclick="reportIssue()">
+            <i class="fa-solid fa-circle-exclamation"></i>
+
+            Report Issue
+          </button>
+
+          <button class="share-btn" onclick="shareReceipt()">
+            <i class="fa-solid fa-share-nodes"></i>
+
+            Share Receipt
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/transaction-details.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<!doctype html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Send Airtime</title>
+
+    <link rel="stylesheet" href="css/send-airtime.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="top-header">
+        <a href="airtime-cash.html">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h2>Send Airtime</h2>
+      </header>
+
+      <div class="card">
+        <h3>Transfer Airtime To</h3>
+
+        <div class="row">
+          <span> Sending From </span>
+
+          <strong id="sender"> - </strong>
+        </div>
+
+        <div class="row">
+          <span> Transfer Airtime To </span>
+
+          <strong id="recipient"> -</strong>
+        </div>
+
+        <div class="row">
+          <span> Network </span>
+
+          <strong id="network"> - </strong>
+        </div>
+
+        <div class="row">
+          <span> Amount </span>
+
+          <strong id="amount"> - </strong>
+        </div>
+
+        <div class="row">
+          <span> You Will Receive </span>
+
+          <strong id="receiveAmount"> - </strong>
+        </div>
+
+        <div class="row">
+          <span> Reference </span>
+
+          <strong id="reference"> - </strong>
+        </div>
+
+        <div class="row">
+          <span> Expires </span>
+
+          <strong id="expiry"> - </strong>
+        </div>
+
+        <p class="note">
+          After successfully transferring the airtime, click the button below.
+        </p>
+
+        <button id="submitRequest">I HAVE SENT THE AIRTIME</button>
+      </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/send-airtime.js"></script>
+  </body>
+</html>

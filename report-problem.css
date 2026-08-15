@@ -1,0 +1,579 @@
+/* ============================================
+   FAST MTN DATA - CONTACT / SUPPORT FORM
+   FULL RESPONSIVE DESIGN
+============================================ */
+
+/* ============================================
+   RESET
+============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f5f5f5;
+  color: #111;
+
+  overflow-x: hidden;
+}
+
+/* ============================================
+   HEADER
+============================================ */
+
+header {
+  width: 100%;
+
+  min-height: 90px;
+
+  background: #ffc107;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  padding: 15px 60px;
+}
+
+header h1,
+header h2 {
+  text-align: center;
+
+  font-size: 22px;
+
+  line-height: 1.3;
+
+  overflow-wrap: anywhere;
+}
+
+/* ============================================
+   BACK BUTTON
+============================================ */
+
+header a {
+  position: absolute;
+
+  left: 20px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #000;
+
+  font-size: 26px;
+
+  text-decoration: none;
+
+  border-radius: 50%;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+header a:active {
+  background: rgba(0, 0, 0, 0.08);
+
+  transform: scale(0.94);
+}
+
+/* ============================================
+   MAIN CONTAINER
+============================================ */
+
+.container {
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  padding: 25px;
+
+  background: #f5f5f5;
+}
+
+/* ============================================
+   LABEL
+============================================ */
+
+label {
+  display: block;
+
+  margin: 20px 0 8px;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  color: #222;
+}
+
+/* ============================================
+   INPUT + TEXTAREA
+============================================ */
+
+input,
+textarea {
+  display: block;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  border: 1px solid #ddd;
+
+  background: #fff;
+
+  color: #111;
+
+  font-size: 16px;
+
+  outline: none;
+
+  line-height: 1.4;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Prevent inputs from overflowing */
+
+input {
+  min-height: 52px;
+}
+
+/* ============================================
+   TEXTAREA
+============================================ */
+
+textarea {
+  min-height: 150px;
+
+  resize: vertical;
+}
+
+/* ============================================
+   FOCUS
+============================================ */
+
+input:focus,
+textarea:focus {
+  border-color: #ffc107;
+
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.14);
+}
+
+/* ============================================
+   PLACEHOLDER
+============================================ */
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+/* ============================================
+   SUBMIT BUTTON
+============================================ */
+
+button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: 54px;
+
+  margin-top: 30px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #ffc107;
+
+  color: #111;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover {
+  background: #e6b000;
+
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.2);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+/* ============================================
+   SMALL PHONES
+   320px - 359px
+============================================ */
+
+@media (max-width: 359px) {
+  header {
+    min-height: 75px;
+
+    padding: 12px 50px;
+  }
+
+  header a {
+    left: 12px;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 22px;
+  }
+
+  header h1,
+  header h2 {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 16px 13px;
+  }
+
+  label {
+    font-size: 14px;
+
+    margin-top: 17px;
+  }
+
+  input,
+  textarea {
+    padding: 13px;
+
+    font-size: 15px;
+
+    border-radius: 10px;
+  }
+
+  textarea {
+    min-height: 130px;
+  }
+
+  button {
+    min-height: 50px;
+
+    font-size: 16px;
+
+    margin-top: 25px;
+  }
+}
+
+/* ============================================
+   NORMAL PHONES
+   360px - 599px
+============================================ */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  header {
+    min-height: 85px;
+
+    padding: 15px 55px;
+  }
+
+  header a {
+    left: 15px;
+
+    font-size: 24px;
+  }
+
+  header h1,
+  header h2 {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+}
+
+/* ============================================
+   LARGE PHONES / SMALL TABLETS
+   600px - 767px
+============================================ */
+
+@media (min-width: 600px) and (max-width: 767px) {
+  header {
+    min-height: 95px;
+
+    padding: 20px 70px;
+  }
+
+  header a {
+    left: 25px;
+  }
+
+  header h1,
+  header h2 {
+    font-size: 24px;
+  }
+
+  .container {
+    max-width: 650px;
+
+    padding: 30px;
+  }
+
+  input,
+  textarea {
+    font-size: 17px;
+  }
+
+  textarea {
+    min-height: 170px;
+  }
+}
+
+/* ============================================
+   TABLETS
+   768px - 1023px
+============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    width: 100%;
+
+    min-height: 100px;
+
+    padding: 20px 80px;
+  }
+
+  header a {
+    left: 30px;
+  }
+
+  header h1,
+  header h2 {
+    font-size: 26px;
+  }
+
+  .container {
+    max-width: 720px;
+
+    padding: 35px;
+
+    margin: 0 auto;
+  }
+
+  input,
+  textarea {
+    font-size: 17px;
+  }
+
+  textarea {
+    min-height: 180px;
+  }
+
+  button {
+    min-height: 58px;
+  }
+}
+
+/* ============================================
+   LAPTOP / DESKTOP
+   1024px+
+============================================ */
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    min-height: 100px;
+
+    padding: 20px 100px;
+  }
+
+  header a {
+    left: 35px;
+  }
+
+  header h1,
+  header h2 {
+    font-size: 27px;
+  }
+
+  .container {
+    max-width: 750px;
+
+    margin: 30px auto;
+
+    padding: 35px;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  }
+
+  input,
+  textarea {
+    font-size: 17px;
+  }
+
+  textarea {
+    min-height: 190px;
+  }
+
+  button {
+    min-height: 58px;
+  }
+}
+
+/* ============================================
+   LARGE DESKTOP
+   1400px+
+============================================ */
+
+@media (min-width: 1400px) {
+  header {
+    min-height: 105px;
+  }
+
+  .container {
+    max-width: 800px;
+
+    padding: 40px;
+  }
+
+  header h1,
+  header h2 {
+    font-size: 29px;
+  }
+}
+
+/* ============================================
+   LANDSCAPE PHONES
+============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  header {
+    min-height: 70px;
+
+    padding: 10px 60px;
+  }
+
+  header a {
+    font-size: 22px;
+  }
+
+  header h1,
+  header h2 {
+    font-size: 19px;
+  }
+
+  .container {
+    padding: 18px;
+  }
+
+  label {
+    margin-top: 14px;
+  }
+
+  textarea {
+    min-height: 110px;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+}
+
+/* ============================================
+   TOUCH DEVICES
+============================================ */
+
+@media (hover: none) {
+  button,
+  a {
+    touch-action: manipulation;
+
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button:hover {
+    background: #ffc107;
+
+    box-shadow: none;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+  }
+}

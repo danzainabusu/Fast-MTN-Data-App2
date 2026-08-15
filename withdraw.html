@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Withdraw</title>
+
+    <link rel="stylesheet" href="css/withdraw.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+
+  <body>
+    <!-- =========================================
+     FAST MTN CUSTOM ALERT
+========================================= -->
+
+    <div id="alertBox" class="alert-box"></div>
+
+    <div class="header">
+      <a href="wallet.html">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+
+      <h2>Withdraw</h2>
+    </div>
+
+    <div class="form">
+      <label>Amount (₦)</label>
+      <input type="number" id="amount" />
+
+      <label>Bank Name</label>
+      <input type="text" id="bank" />
+
+      <label>Account Number</label>
+      <input type="number" id="account" />
+
+      <label>Account Name</label>
+      <input type="text" id="accountName" />
+
+      <button id="withdrawBtn">Request Withdrawal</button>
+    </div>
+
+    <!-- PAGE LOADER -->
+    <div id="pageLoader" class="page-loader">
+      <div class="loader"></div>
+      <small>Loading...</small>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/withdraw.js"></script>
+  </body>
+</html>

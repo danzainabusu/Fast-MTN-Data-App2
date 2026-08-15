@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fund Wallet</title>
+
+    <link rel="stylesheet" href="css/fund-wallet.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+
+  <body>
+    <!-- =========================================
+     FAST MTN CUSTOM ALERT
+========================================= -->
+
+    <div id="alertBox" class="alert-box"></div>
+
+    <div class="app">
+      <!-- Header -->
+
+      <div class="header">
+        <a href="wallet.html">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h2>Fund Wallet</h2>
+      </div>
+
+      <div class="fund-card">
+        <!-- Amount -->
+
+        <label>Amount (₦)</label>
+
+        <input type="number" id="amount" placeholder="Enter amount" />
+
+        <!-- Payment Method -->
+
+        <label>Payment Method</label>
+
+        <select id="method">
+          <option value="bank">Bank Transfer</option>
+
+          <option value="opay">OPay</option>
+
+          <option value="palmpay">PalmPay</option>
+        </select>
+
+        <!-- Payment Details -->
+
+        <div class="bank-details">
+          <h3>Payment Details</h3>
+
+          <div class="bank-row">
+            <span>Provider</span>
+
+            <strong id="providerName"> Moniepoint MFB </strong>
+          </div>
+
+          <div class="bank-row">
+            <span>Account Name</span>
+
+            <strong id="accountName"> FAST MTN DATA </strong>
+          </div>
+
+          <div class="bank-row">
+            <span>Account Number</span>
+
+            <div class="copy-box">
+              <strong id="accountNumber"> 1234567890 </strong>
+
+              <button type="button" id="copyBtn">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transaction Reference -->
+
+        <label style="margin-top: 20px"> Transaction Reference </label>
+
+        <input
+          type="text"
+          id="reference"
+          placeholder="Enter payment reference"
+        />
+
+        <!-- Notice -->
+
+        <div class="notice">
+          <i class="fa-solid fa-circle-info"></i>
+          After making payment, enter the transaction reference and tap
+          <strong>Submit Request</strong>. Your wallet will be credited after
+          the admin approves the payment.
+        </div>
+
+        <!-- Submit -->
+
+        <button id="submitFund">Submit Request</button>
+      </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/fund-wallet.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+  <body>
+    <!-- =========================================
+     FAST MTN CUSTOM ALERT
+========================================= -->
+
+    <div id="alertBox" class="alert-box"></div>
+    <!-- =====================================
+     FAST MTN PAGE LOADER
+===================================== -->
+    <div id="pageLoader">
+      <div class="loaderWrapper">
+        <!-- Rotating border -->
+        <div class="loaderBorder"></div>
+
+        <!-- Logo stays still -->
+        <img src="logo.png" alt="Fast MTN" class="loaderLogo" />
+      </div>
+    </div>
+
+    <div class="phone">
+      <div class="header">
+        <a href="register.html">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+      </div>
+
+      <div class="content">
+        <h2>Welcome Back</h2>
+
+        <p class="subtitle">Login to your account.</p>
+
+        <form id="loginForm">
+          <div class="input-box">
+            <label>MTN Phone Number</label>
+            <input
+              type="tel"
+              id="loginPhone"
+              placeholder="08031234567"
+              required
+            />
+          </div>
+
+          <div class="input-box password-box">
+            <label>Password</label>
+
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Enter password"
+              required
+            />
+
+            <i class="fa-solid fa-eye toggle-password"></i>
+          </div>
+
+          <button type="submit" data-no-loader="true">Login</button>
+        </form>
+
+        <div class="bottom-text">
+          Don't have an account?
+          <a href="register.html"> Register </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

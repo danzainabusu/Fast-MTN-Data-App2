@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Report Problem</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/report-problem.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+
+  <body>
+    <header>
+      <a href="help-support.html">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+
+      <h2>Report a Problem</h2>
+    </header>
+
+    <div class="container">
+      <label>Problem Title</label>
+
+      <input type="text" id="title" placeholder="e.g Payment not received" />
+
+      <label>Description</label>
+
+      <textarea
+        0
+        id="message"
+        placeholder="Describe your problem..."
+      ></textarea>
+
+      <button id="submitReport">Submit Report</button>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/report-problem.js"></script>
+  </body>
+</html>

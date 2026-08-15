@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Buy Data</title>
+
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+  <body>
+    <!-- =========================================
+     FAST MTN CUSTOM ALERT
+========================================= -->
+
+    <div id="alertBox" class="alert-box"></div>
+
+    <div class="phone">
+      <div class="top">
+        <a href="bundles.html">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h2>Buy Data</h2>
+
+        <div></div>
+      </div>
+
+      <form id="buyForm">
+        <div class="input-box">
+          <label>Selected Bundle</label>
+
+          <input type="text" id="bundle" readonly />
+        </div>
+
+        <div class="input-box">
+          <label>Price</label>
+
+          <input type="text" id="price" readonly />
+        </div>
+
+        <div class="input-box">
+          <label>Validity</label>
+
+          <input type="text" id="validity" readonly />
+        </div>
+
+        <div class="input-box">
+          <label>MTN Phone Number</label>
+
+          <input type="tel" id="phone" placeholder="08031234567" required />
+        </div>
+
+        <button type="submit" class="buy-btn">Buy Data</button>
+      </form>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/buy-data.js"></script>
+  </body>
+</html>

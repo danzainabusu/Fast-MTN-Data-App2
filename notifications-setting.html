@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Notification Settings</title>
+
+    <link rel="stylesheet" href="css/notifications-setting.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- HEADER -->
+      <div class="header">
+        <a href="profile.html">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h2>Notification Settings</h2>
+      </div>
+
+      <!-- SETTINGS CARD -->
+      <div class="card">
+        <!-- ==============================
+             DATA PURCHASE
+        =============================== -->
+
+        <div class="item">
+          <div class="left">
+            <i class="fa-solid fa-wifi"></i>
+
+            <div>
+              <h3>Data Purchase</h3>
+
+              <p>Receive data purchase alerts</p>
+            </div>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox" id="dataNotify" />
+
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <!-- ==============================
+             WALLET FUNDING
+        =============================== -->
+
+        <div class="item">
+          <div class="left">
+            <i class="fa-solid fa-wallet"></i>
+
+            <div>
+              <h3>Wallet Funding</h3>
+
+              <p>Wallet credit notifications</p>
+            </div>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox" id="walletNotify" />
+
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <!-- ==============================
+             AIRTIME
+        =============================== -->
+
+        <div class="item">
+          <div class="left">
+            <i class="fa-solid fa-phone"></i>
+
+            <div>
+              <h3>Airtime</h3>
+
+              <p>Airtime purchase alerts</p>
+            </div>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox" id="airtimeNotify" />
+
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <!-- ==============================
+             AIRTIME TO CASH
+        =============================== -->
+
+        <div class="item">
+          <div class="left">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+
+            <div>
+              <h3>Airtime to Cash</h3>
+
+              <p>Sell airtime alerts</p>
+            </div>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox" id="convertNotify" />
+
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <!-- ==============================
+             WITHDRAWAL
+        =============================== -->
+
+        <div class="item">
+          <div class="left">
+            <i class="fa-solid fa-building-columns"></i>
+
+            <div>
+              <h3>Withdrawal</h3>
+
+              <p>Withdrawal request notifications</p>
+            </div>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox" id="withdrawNotify" />
+
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMPORTANT:
+         JavaScript files are in js/,
+         NOT css/
+    -->
+
+    <script src="js/utils.js"></script>
+    <script src="js/notifications-setting.js"></script>
+  </body>
+</html>

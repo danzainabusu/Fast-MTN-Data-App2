@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Security</title>
+
+    <link rel="stylesheet" href="css/security.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- Header -->
+
+      <div class="header">
+        <a href="profile.html">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h2>Security</h2>
+      </div>
+
+      <!-- Security Card -->
+
+      <div class="card">
+        <div class="item">
+          <div class="left">
+            <i class="fa-solid fa-lock"></i>
+
+            <div>
+              <h3>Password Status</h3>
+
+              <p>Strong Password</p>
+            </div>
+          </div>
+
+          <span class="success"> Active </span>
+        </div>
+
+        <div class="item">
+          <div class="left">
+            <i class="fa-solid fa-mobile-screen"></i>
+
+            <div>
+              <h3>Current Device</h3>
+
+              <p id="device">Android Device</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="left">
+            <i class="fa-solid fa-clock"></i>
+
+            <div>
+              <h3>Last Login</h3>
+
+              <p id="lastLogin">--</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="left">
+            <i class="fa-solid fa-user-shield"></i>
+
+            <div>
+              <h3>Account Status</h3>
+
+              <p>Verified User</p>
+            </div>
+          </div>
+
+          <span class="success"> Active </span>
+        </div>
+      </div>
+
+      <!-- Logout -->
+
+      <button id="logoutAll">Logout</button>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/security.js"></script>
+  </body>
+</html>

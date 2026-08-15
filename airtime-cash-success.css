@@ -1,0 +1,692 @@
+/* ============================================
+   FAST MTN DATA
+   RESPONSIVE SUCCESS PAGE
+============================================ */
+
+/* ============================================
+   RESET
+============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f5f5;
+  overflow-x: hidden;
+  color: #111;
+}
+
+/* ============================================
+   SUCCESS TOP
+============================================ */
+
+.top {
+  width: 100%;
+  min-height: 250px;
+
+  background: #28a745;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+
+  padding: 30px 20px;
+}
+
+/* ============================================
+   CHECK CIRCLE
+============================================ */
+
+.check {
+  width: 110px;
+  height: 110px;
+
+  background: #fff;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  flex-shrink: 0;
+}
+
+.check i {
+  font-size: 60px;
+
+  color: #28a745;
+}
+
+/* ============================================
+   MAIN CONTENT
+============================================ */
+
+.content {
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: -70px auto 0;
+
+  padding: 20px 20px 50px;
+
+  position: relative;
+}
+
+/* ============================================
+   TITLE
+============================================ */
+
+.content h1 {
+  width: 100%;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+
+  line-height: 1.3;
+
+  overflow-wrap: anywhere;
+}
+
+/* ============================================
+   DESCRIPTION
+============================================ */
+
+.content > p {
+  width: 100%;
+
+  text-align: center;
+
+  color: #666;
+
+  margin-bottom: 25px;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+/* ============================================
+   DETAILS CARD
+============================================ */
+
+.card {
+  width: 100%;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
+}
+
+/* ============================================
+   ROW
+============================================ */
+
+.row {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #eee;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+/* ============================================
+   ROW TEXT
+============================================ */
+
+.row span,
+.row strong {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+.row span {
+  color: #666;
+}
+
+.row strong {
+  text-align: right;
+
+  max-width: 65%;
+}
+
+/* ============================================
+   PENDING STATUS
+============================================ */
+
+.pending {
+  color: #ff9800 !important;
+
+  font-weight: bold;
+}
+
+/* ============================================
+   BUTTONS
+============================================ */
+
+button {
+  width: 100%;
+
+  min-height: 55px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  margin-top: 20px;
+
+  padding: 14px 18px;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  transition:
+    transform 0.15s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+/* ============================================
+   SELL MORE BUTTON
+============================================ */
+
+#sellMore {
+  background: #ffc107;
+
+  color: #111;
+}
+
+#sellMore:hover {
+  background: #e6b000;
+}
+
+/* ============================================
+   OUTLINE BUTTON
+============================================ */
+
+.outline {
+  background: #fff;
+
+  border: 2px solid #ddd;
+
+  color: #111;
+}
+
+.outline:hover {
+  background: #f7f7f7;
+
+  border-color: #ccc;
+}
+
+/* ============================================
+   VERY SMALL PHONES
+   320px - 374px
+============================================ */
+
+@media (max-width: 374px) {
+  .top {
+    min-height: 210px;
+
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+
+    padding: 25px 15px;
+  }
+
+  .check {
+    width: 85px;
+    height: 85px;
+  }
+
+  .check i {
+    font-size: 45px;
+  }
+
+  .content {
+    margin-top: -50px;
+
+    padding: 15px 14px 40px;
+  }
+
+  .content h1 {
+    font-size: 24px;
+  }
+
+  .content > p {
+    font-size: 14px;
+
+    margin-bottom: 20px;
+  }
+
+  .card {
+    padding: 15px;
+
+    border-radius: 15px;
+  }
+
+  .row {
+    padding: 14px 0;
+
+    gap: 10px;
+
+    font-size: 13px;
+  }
+
+  .row strong {
+    max-width: 60%;
+  }
+
+  button {
+    min-height: 50px;
+
+    font-size: 15px;
+
+    border-radius: 12px;
+
+    margin-top: 15px;
+  }
+}
+
+/* ============================================
+   NORMAL PHONES
+   375px - 599px
+============================================ */
+
+@media (min-width: 375px) and (max-width: 599px) {
+  .top {
+    min-height: 235px;
+
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+  }
+
+  .check {
+    width: 100px;
+    height: 100px;
+  }
+
+  .check i {
+    font-size: 54px;
+  }
+
+  .content {
+    padding: 20px 18px 50px;
+
+    margin-top: -60px;
+  }
+
+  .content h1 {
+    font-size: 26px;
+  }
+
+  .content > p {
+    font-size: 15px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .row {
+    padding: 16px 0;
+
+    gap: 15px;
+
+    font-size: 14px;
+  }
+
+  button {
+    min-height: 53px;
+
+    font-size: 16px;
+
+    border-radius: 13px;
+  }
+}
+
+/* ============================================
+   LARGE PHONES / SMALL TABLETS
+   600px - 767px
+============================================ */
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .top {
+    min-height: 270px;
+
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  .check {
+    width: 120px;
+    height: 120px;
+  }
+
+  .check i {
+    font-size: 65px;
+  }
+
+  .content {
+    max-width: 650px;
+
+    padding: 25px 30px 60px;
+
+    margin-top: -75px;
+  }
+
+  .content h1 {
+    font-size: 30px;
+  }
+
+  .content > p {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .row {
+    padding: 18px 0;
+
+    font-size: 15px;
+  }
+
+  button {
+    min-height: 56px;
+  }
+}
+
+/* ============================================
+   TABLETS
+   768px - 1023px
+============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background: #f2f2f2;
+  }
+
+  .top {
+    min-height: 290px;
+
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+  }
+
+  .check {
+    width: 125px;
+    height: 125px;
+  }
+
+  .check i {
+    font-size: 70px;
+  }
+
+  .content {
+    max-width: 700px;
+
+    padding: 30px 35px 70px;
+
+    margin-top: -80px;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+
+  .content > p {
+    font-size: 17px;
+  }
+
+  .card {
+    padding: 28px;
+
+    border-radius: 20px;
+  }
+
+  .row {
+    padding: 20px 0;
+
+    font-size: 16px;
+  }
+
+  button {
+    min-height: 58px;
+
+    font-size: 17px;
+  }
+}
+
+/* ============================================
+   LAPTOP
+   1024px - 1199px
+============================================ */
+
+@media (min-width: 1024px) {
+  .top {
+    min-height: 300px;
+
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  .check {
+    width: 130px;
+    height: 130px;
+  }
+
+  .check i {
+    font-size: 72px;
+  }
+
+  .content {
+    max-width: 720px;
+
+    padding: 35px 30px 80px;
+
+    margin-top: -85px;
+  }
+
+  .content h1 {
+    font-size: 34px;
+  }
+
+  .card {
+    padding: 30px;
+
+    border-radius: 20px;
+  }
+
+  .row {
+    padding: 20px 0;
+
+    font-size: 16px;
+  }
+
+  button {
+    min-height: 60px;
+  }
+}
+
+/* ============================================
+   LARGE DESKTOP
+   1200px+
+============================================ */
+
+@media (min-width: 1200px) {
+  .top {
+    min-height: 320px;
+  }
+
+  .check {
+    width: 140px;
+    height: 140px;
+  }
+
+  .check i {
+    font-size: 78px;
+  }
+
+  .content {
+    max-width: 750px;
+
+    padding-top: 40px;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .content > p {
+    font-size: 17px;
+  }
+
+  .card {
+    padding: 32px;
+  }
+}
+
+/* ============================================
+   VERY LARGE SCREENS
+   1400px+
+============================================ */
+
+@media (min-width: 1400px) {
+  .content {
+    max-width: 780px;
+  }
+
+  .card {
+    padding: 35px;
+  }
+}
+
+/* ============================================
+   LANDSCAPE PHONES
+============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .top {
+    min-height: 180px;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .check {
+    width: 75px;
+    height: 75px;
+  }
+
+  .check i {
+    font-size: 40px;
+  }
+
+  .content {
+    margin-top: -40px;
+
+    padding-top: 15px;
+  }
+
+  .content h1 {
+    font-size: 23px;
+  }
+
+  .content > p {
+    margin-bottom: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .row {
+    padding: 12px 0;
+  }
+
+  button {
+    min-height: 48px;
+
+    margin-top: 12px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+
+    transition: none !important;
+  }
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Airtime Purchase Successful</title>
+
+    <link rel="stylesheet" href="css/airtime-success.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+
+  <body>
+    <div class="success-header">
+      <div class="check-circle">
+        <i class="fa-solid fa-check"></i>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>Payment Successful!</h1>
+
+      <p>You have successfully purchased</p>
+
+      <h2 id="networkAmount"></h2>
+
+      <div class="details">
+        <div class="row">
+          <span>Amount</span>
+          <strong id="amount"></strong>
+        </div>
+
+        <div class="row">
+          <span>Network</span>
+          <strong id="network"></strong>
+        </div>
+
+        <div class="row">
+          <span>Phone Number</span>
+          <strong id="phone"></strong>
+        </div>
+
+        <div class="row">
+          <span>Date</span>
+          <strong id="date"></strong>
+        </div>
+      </div>
+
+      <button id="buyMore">Buy More</button>
+
+      <button id="viewDetails" class="outline">View Details</button>
+    </div>
+
+    <script src="js/airtime-success.js"></script>
+  </body>
+</html>

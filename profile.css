@@ -1,0 +1,534 @@
+/* ============================================
+   FAST MTN DATA - PROFILE PAGE
+============================================ */
+
+/* ============================================
+   RESET
+============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background: #fff;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ============================================
+   APP CONTAINER
+============================================ */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* ============================================
+   HEADER
+============================================ */
+
+.header {
+  width: 100%;
+  min-height: 290px;
+  background: #ffc107;
+
+  position: relative;
+
+  padding: 45px 28px 35px;
+
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* ============================================
+   BACK BUTTON
+============================================ */
+
+.back {
+  position: absolute;
+
+  top: 45px;
+  left: 28px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #111;
+  text-decoration: none;
+
+  font-size: 27px;
+
+  border-radius: 50%;
+
+  transition: 0.2s ease;
+}
+
+.back:active {
+  transform: scale(0.9);
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+   USER AREA
+============================================ */
+
+.user {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+/* ============================================
+   AVATAR
+============================================ */
+
+.avatar {
+  width: 120px;
+  height: 120px;
+
+  min-width: 120px;
+
+  position: relative;
+}
+
+/* ============================================
+   PROFILE IMAGE
+============================================ */
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 4px solid #fff;
+
+  background: #eee;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.avatar img:active {
+  transform: scale(0.96);
+}
+
+/* ============================================
+   CAMERA BUTTON
+============================================ */
+
+.camera-btn {
+  position: absolute;
+
+  right: -2px;
+  bottom: 0;
+
+  width: 40px;
+  height: 40px;
+
+  background: #fff;
+
+  color: #111;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+
+  border: 2px solid #ffc107;
+
+  z-index: 2;
+
+  transition: 0.2s ease;
+}
+
+.camera-btn:active {
+  transform: scale(0.9);
+}
+
+/* ============================================
+   USER INFORMATION
+============================================ */
+
+.info {
+  min-width: 0;
+}
+
+.info h2 {
+  font-size: 27px;
+
+  color: #111;
+
+  margin-bottom: 8px;
+
+  word-break: break-word;
+}
+
+.info p {
+  font-size: 18px;
+
+  color: #222;
+}
+
+/* ============================================
+   MENU
+============================================ */
+
+.menu {
+  width: 100%;
+
+  background: #fff;
+
+  margin-top: 20px;
+
+  padding-bottom: 30px;
+}
+
+/* ============================================
+   MENU ITEM
+============================================ */
+
+.item {
+  width: 100%;
+
+  min-height: 76px;
+
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-decoration: none;
+
+  color: #333;
+
+  border-bottom: 1px solid #e5e5e5;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.item > div {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+}
+
+.item > div i {
+  width: 25px;
+
+  text-align: center;
+
+  font-size: 21px;
+
+  color: #222;
+}
+
+.item span {
+  font-size: 19px;
+}
+
+.item > i {
+  color: #999;
+
+  font-size: 17px;
+}
+
+.item:active {
+  background: #f7f7f7;
+  transform: scale(0.99);
+}
+
+/* ============================================
+   LOGOUT
+============================================ */
+
+.item.logout {
+  color: #e53935;
+}
+
+.item.logout > div i {
+  color: #e53935;
+}
+
+/* ============================================
+   FULL SCREEN IMAGE VIEWER
+============================================ */
+
+.image-viewer {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.92);
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  z-index: 9999;
+}
+
+/* Show viewer */
+
+.image-viewer.show {
+  display: flex;
+}
+
+/* ============================================
+   FULL SIZE IMAGE
+============================================ */
+
+.image-viewer img {
+  max-width: 95%;
+  max-height: 85%;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+
+  animation: imageZoom 0.2s ease;
+}
+
+/* ============================================
+   IMAGE ZOOM ANIMATION
+============================================ */
+
+@keyframes imageZoom {
+  from {
+    opacity: 0;
+
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   CLOSE IMAGE BUTTON
+============================================ */
+
+.close-image {
+  position: absolute;
+
+  top: 25px;
+  right: 25px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: #fff;
+
+  font-size: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 2;
+}
+
+.close-image:active {
+  transform: scale(0.9);
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ============================================
+   RESPONSIVE - SMALL PHONES
+============================================ */
+
+@media (max-width: 380px) {
+  .header {
+    min-height: 260px;
+
+    padding: 35px 20px 30px;
+
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+  }
+
+  .back {
+    top: 30px;
+    left: 20px;
+  }
+
+  .user {
+    gap: 14px;
+  }
+
+  .avatar {
+    width: 90px;
+    height: 90px;
+
+    min-width: 90px;
+  }
+
+  .camera-btn {
+    width: 32px;
+    height: 32px;
+
+    font-size: 14px;
+  }
+
+  .info h2 {
+    font-size: 21px;
+  }
+
+  .info p {
+    font-size: 15px;
+  }
+
+  .item {
+    min-height: 65px;
+
+    padding: 0 20px;
+  }
+
+  .item > div {
+    gap: 18px;
+  }
+
+  .item span {
+    font-size: 16px;
+  }
+
+  .item > div i {
+    font-size: 18px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - NORMAL PHONES
+============================================ */
+
+@media (min-width: 381px) and (max-width: 600px) {
+  .header {
+    min-height: 285px;
+  }
+
+  .avatar {
+    width: 110px;
+    height: 110px;
+
+    min-width: 110px;
+  }
+
+  .info h2 {
+    font-size: 24px;
+  }
+}
+
+/* ============================================
+   TABLETS
+============================================ */
+
+@media (min-width: 601px) {
+  .app {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .header {
+    min-height: 320px;
+
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .back {
+    left: 45px;
+  }
+
+  .item {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .item:hover {
+    background: #fafafa;
+  }
+}
+
+/* ============================================
+   LARGE SCREENS
+============================================ */
+
+@media (min-width: 1000px) {
+  body {
+    background: #f3f3f3;
+  }
+
+  .app {
+    min-height: 100vh;
+
+    background: #fff;
+  }
+}

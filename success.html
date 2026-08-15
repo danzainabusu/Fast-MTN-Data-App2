@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Payment Successful</title>
+
+    <link rel="stylesheet" href="css/success.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="top-green">
+        <div class="check-circle">
+          <i class="fa-solid fa-check"></i>
+        </div>
+      </div>
+
+      <div class="card">
+        <h1>Payment Successful!</h1>
+        <p>You have successfully purchased</p>
+
+        <h2 id="bundleTitle"></h2>
+
+        <div class="receipt">
+          <div class="item">
+            <span>Amount</span>
+            <strong id="amount"></strong>
+          </div>
+
+          <div class="item">
+            <span>Bundle</span>
+            <strong id="bundle"></strong>
+          </div>
+
+          <div class="item">
+            <span>Validity</span>
+            <strong id="validity"></strong>
+          </div>
+
+          <div class="item">
+            <span>Phone Number</span>
+            <strong id="phone"></strong>
+          </div>
+
+          <div class="item">
+            <span>Date</span>
+            <strong id="date"></strong>
+          </div>
+        </div>
+
+        <button onclick="location.href = 'bundle.html'" class="home">
+          Buy More
+        </button>
+
+        <button
+          class="details"
+          onclick="location.href = 'transaction-details.html'"
+        >
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <script src="js/success.js"></script>
+  </body>
+</html>

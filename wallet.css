@@ -1,0 +1,704 @@
+/* ============================================
+   FAST MTN DATA - RESPONSIVE WALLET
+============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #111;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   APP
+============================================ */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #fff;
+
+  padding-bottom: 90px;
+}
+
+/* ============================================
+   HEADER
+============================================ */
+
+.header {
+  width: 100%;
+  min-height: 80px;
+
+  background: #ffc107;
+
+  display: flex;
+  align-items: center;
+
+  padding: 15px 20px;
+
+  position: relative;
+
+  gap: 15px;
+}
+
+.header a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #000;
+
+  font-size: 22px;
+
+  text-decoration: none;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+}
+
+.header a:active {
+  background: rgba(0, 0, 0, 0.08);
+  transform: scale(0.94);
+}
+
+.header h2 {
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 20px;
+
+  white-space: nowrap;
+
+  max-width: calc(100% - 120px);
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+/* ============================================
+   WALLET CARD
+============================================ */
+
+.wallet-card {
+  width: calc(100% - 40px);
+
+  background: #111;
+
+  color: #fff;
+
+  margin: 20px;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.wallet-card p {
+  opacity: 0.8;
+
+  margin-bottom: 10px;
+
+  font-size: 14px;
+}
+
+.wallet-card h1 {
+  font-size: 36px;
+
+  margin-bottom: 20px;
+
+  overflow-wrap: anywhere;
+}
+
+.wallet-card button {
+  background: #ffc107;
+
+  color: #111;
+
+  border: none;
+
+  min-height: 48px;
+
+  padding: 12px 22px;
+
+  border-radius: 12px;
+
+  font-weight: bold;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    background 0.2s ease;
+}
+
+.wallet-card button:hover {
+  background: #e6b000;
+}
+
+.wallet-card button:active {
+  transform: scale(0.97);
+}
+
+/* ============================================
+   SECTION
+============================================ */
+
+.section {
+  width: 100%;
+
+  padding: 20px;
+}
+
+.section h3 {
+  margin-bottom: 15px;
+
+  font-size: 19px;
+}
+
+/* ============================================
+   WALLET HISTORY
+============================================ */
+
+.walletHistory {
+  width: 100%;
+
+  /*
+    Let the page scroll naturally.
+    Avoid a second scroll area on phones.
+  */
+  max-height: none;
+
+  overflow: visible;
+}
+
+/* ============================================
+   HISTORY CARD
+============================================ */
+
+.history-card {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 15px;
+
+  border: 1px solid #eee;
+
+  border-radius: 15px;
+
+  margin-bottom: 15px;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.history-card:active {
+  transform: scale(0.98);
+}
+
+/* ============================================
+   HISTORY LEFT
+============================================ */
+
+.history-left {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+/* ============================================
+   HISTORY ICON
+============================================ */
+
+.history-icon {
+  width: 42px;
+
+  height: 42px;
+
+  min-width: 42px;
+
+  border-radius: 50%;
+
+  background: #fff8dc;
+
+  color: #ffc107;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+/* ============================================
+   HISTORY INFO
+============================================ */
+
+.history-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.history-info strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 15px;
+
+  overflow-wrap: anywhere;
+}
+
+.history-info p {
+  margin: 3px 0;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  overflow-wrap: anywhere;
+}
+
+.history-info small {
+  display: inline-block;
+
+  margin-top: 3px;
+
+  font-weight: bold;
+
+  font-size: 12px;
+}
+
+/* ============================================
+   AMOUNT
+============================================ */
+
+.history-card > .credit,
+.history-card > .debit {
+  flex-shrink: 0;
+
+  max-width: 40%;
+
+  text-align: right;
+
+  overflow-wrap: anywhere;
+}
+
+/* ============================================
+   CREDIT
+============================================ */
+
+.credit {
+  color: #28a745;
+
+  font-weight: bold;
+
+  white-space: nowrap;
+}
+
+/* ============================================
+   DEBIT
+============================================ */
+
+.debit {
+  color: #e53935;
+
+  font-weight: bold;
+
+  white-space: nowrap;
+}
+
+/* ============================================
+   STATUS
+============================================ */
+
+.pending {
+  color: #ff9800;
+}
+
+.success {
+  color: #28a745;
+}
+
+.failed {
+  color: #e53935;
+}
+
+/* ============================================
+   EMPTY HISTORY
+============================================ */
+
+.empty {
+  width: 100%;
+
+  padding: 50px 20px;
+
+  text-align: center;
+
+  color: #777;
+
+  line-height: 1.5;
+}
+
+/* ============================================
+   SMALL PHONES
+   320px - 374px
+============================================ */
+
+@media (max-width: 374px) {
+  .app {
+    padding-bottom: 80px;
+  }
+
+  .header {
+    min-height: 70px;
+
+    padding: 12px 15px;
+  }
+
+  .header a {
+    width: 38px;
+
+    height: 38px;
+
+    font-size: 20px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+
+    max-width: calc(100% - 100px);
+  }
+
+  .wallet-card {
+    width: calc(100% - 24px);
+
+    margin: 12px;
+
+    padding: 18px;
+
+    border-radius: 17px;
+  }
+
+  .wallet-card h1 {
+    font-size: 29px;
+  }
+
+  .wallet-card button {
+    width: 100%;
+
+    padding: 12px;
+  }
+
+  .section {
+    padding: 15px 12px;
+  }
+
+  .section h3 {
+    font-size: 17px;
+  }
+
+  .history-card {
+    padding: 12px;
+
+    gap: 8px;
+
+    border-radius: 14px;
+  }
+
+  .history-left {
+    gap: 9px;
+  }
+
+  .history-icon {
+    width: 38px;
+
+    height: 38px;
+
+    min-width: 38px;
+
+    font-size: 14px;
+  }
+
+  .history-info strong {
+    font-size: 13px;
+  }
+
+  .history-info p {
+    font-size: 11px;
+  }
+
+  .history-info small {
+    font-size: 10px;
+  }
+
+  .history-card > .credit,
+  .history-card > .debit {
+    font-size: 12px;
+
+    max-width: 35%;
+  }
+}
+
+/* ============================================
+   NORMAL PHONES
+   375px - 599px
+============================================ */
+
+@media (min-width: 375px) and (max-width: 599px) {
+  .header {
+    min-height: 75px;
+
+    padding: 13px 18px;
+  }
+
+  .header h2 {
+    font-size: 19px;
+  }
+
+  .wallet-card {
+    margin: 15px;
+
+    width: calc(100% - 30px);
+
+    padding: 20px;
+  }
+
+  .wallet-card h1 {
+    font-size: 32px;
+  }
+
+  .section {
+    padding: 18px 15px;
+  }
+
+  .history-card {
+    padding: 14px;
+  }
+}
+
+/* ============================================
+   LARGE PHONES / SMALL TABLETS
+   600px - 767px
+============================================ */
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .header {
+    padding-left: 30px;
+
+    padding-right: 30px;
+  }
+
+  .wallet-card {
+    width: calc(100% - 50px);
+
+    margin: 25px;
+
+    padding: 28px;
+  }
+
+  .section {
+    padding: 25px;
+  }
+
+  .history-card {
+    padding: 18px;
+  }
+}
+
+/* ============================================
+   TABLETS
+   768px - 1023px
+============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .app {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
+  }
+
+  .header {
+    padding-left: 30px;
+
+    padding-right: 30px;
+  }
+
+  .wallet-card {
+    margin: 25px 30px;
+
+    padding: 30px;
+  }
+
+  .section {
+    padding: 25px 30px;
+  }
+
+  .history-card {
+    padding: 20px;
+  }
+}
+
+/* ============================================
+   LAPTOP / DESKTOP
+   1024px+
+============================================ */
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+
+    justify-content: center;
+  }
+
+  .app {
+    width: 100%;
+
+    max-width: 1100px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
+  }
+
+  .header {
+    padding-left: 35px;
+
+    padding-right: 35px;
+  }
+
+  .wallet-card {
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 32px;
+  }
+
+  .section {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 25px 0;
+  }
+
+  .history-card {
+    padding: 20px;
+  }
+}
+
+/* ============================================
+   VERY LARGE SCREENS
+   1400px+
+============================================ */
+
+@media (min-width: 1400px) {
+  .app {
+    max-width: 1200px;
+  }
+
+  .wallet-card {
+    max-width: 1000px;
+  }
+
+  .section {
+    max-width: 1000px;
+  }
+}
+
+/* ============================================
+   LANDSCAPE PHONES
+============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .header {
+    min-height: 65px;
+  }
+
+  .wallet-card {
+    margin-top: 15px;
+
+    padding: 18px;
+  }
+
+  .wallet-card h1 {
+    font-size: 28px;
+
+    margin-bottom: 12px;
+  }
+
+  .section {
+    padding-top: 15px;
+  }
+
+  .history-card {
+    padding: 12px;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+
+    animation: none !important;
+
+    transition: none !important;
+  }
+}

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Airtime To Cash</title>
+
+    <link rel="stylesheet" href="css/airtime-cash.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+
+  <body>
+    <!-- =========================================
+     FAST MTN CUSTOM ALERT
+========================================= -->
+
+    <div id="alertBox" class="alert-box"></div>
+
+    <div class="container">
+      <header class="header">
+        <a href="dashboard.html">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h2>Airtime To Cash</h2>
+      </header>
+
+      <div class="card">
+        <button type="button" id="viewPolicyBtn" class="policy-btn">
+          View Policy
+        </button>
+
+        <!-- POLICY MODAL -->
+        <div id="policyModal" class="policy-modal">
+          <div class="policy-box">
+            <div class="policy-header">
+              <h2>Airtime to Cash Policy</h2>
+
+              <button type="button" id="closePolicy">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div class="policy-content">
+              <div class="policy-item">
+                <i class="fa-solid fa-percent"></i>
+                <div>
+                  <h3>Processing Fee</h3>
+                  <p>
+                    A 15% processing fee is deducted from the airtime amount.
+                  </p>
+                </div>
+              </div>
+
+              <div class="policy-item">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                  <h3>Transfer Validity</h3>
+                  <p>
+                    You must send the airtime and submit your request within 20
+                    minutes.
+                  </p>
+                </div>
+              </div>
+
+              <div class="policy-item">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <div>
+                  <h3>Correct Number</h3>
+                  <p>
+                    Make sure you send the airtime to the exact number displayed
+                    on the transfer page.
+                  </p>
+                </div>
+              </div>
+
+              <div class="policy-item">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <div>
+                  <h3>Important</h3>
+                  <p>
+                    Airtime sent to the wrong number may not be recoverable.
+                    Always verify the receiving number before transferring.
+                  </p>
+                </div>
+              </div>
+
+              <div class="policy-item">
+                <i class="fa-solid fa-hourglass-half"></i>
+                <div>
+                  <h3>Approval</h3>
+                  <p>
+                    Your request will remain pending until it is reviewed and
+                    approved.
+                  </p>
+                </div>
+              </div>
+
+              <div class="policy-item">
+                <i class="fa-solid fa-wallet"></i>
+                <div>
+                  <h3>Cash Credit</h3>
+                  <p>
+                    The amount you will receive is credited to your wallet only
+                    after your request has been successfully approved.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              id="understandPolicy"
+              class="policy-close-btn"
+            >
+              I Understand
+            </button>
+          </div>
+        </div>
+
+        <h3>Convert Airtime To Cash</h3>
+
+        <div class="input-group">
+          <label>Network</label>
+
+          <select id="network">
+            <option value="">Select Network</option>
+
+            <option value="MTN">MTN</option>
+
+            <option value="Airtel" disabled>Airtel</option>
+
+            <option value="Glo" disabled>Glo</option>
+
+            <option value="9mobile" disabled>9mobile</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>
+            Sending From
+            <small> (number from which the airtime will be sent) </small>
+          </label>
+
+          <input
+            type="tel"
+            id="sender"
+            placeholder="e.g. 08040902312"
+            maxlength="11"
+          />
+        </div>
+
+        <div class="input-group">
+          <label> Airtime Amount </label>
+
+          <input type="number" id="amount" placeholder="e.g. 1000" />
+        </div>
+
+        <div class="receive-box">
+          <span> You will receive </span>
+
+          <strong id="cashAmount"> ₦0 </strong>
+        </div>
+
+        <button id="continueBtn" class="continue-btn">Continue</button>
+      </div>
+
+      <div class="info-card">
+        <h3>Transfer Information</h3>
+
+        <div class="info-row receiving-row">
+          <span>Send airtime to</span>
+
+          <div class="receiving-number-box">
+            <strong id="receivingNumber">Loading...</strong>
+
+            <button
+              type="button"
+              id="copyReceivingNumber"
+              class="copy-number"
+              aria-label="Copy receiving number"
+            >
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span>Processing fee</span>
+          <strong>15%</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Validity</span>
+          <strong>20 minutes</strong>
+        </div>
+
+        <small id="copyMessage"></small>
+      </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/airtime-cash.js"></script>
+  </body>
+</html>

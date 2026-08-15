@@ -1,0 +1,513 @@
+/* ============================================
+   FAST MTN DATA - SUCCESS / RECEIPT PAGE
+   FULLY RESPONSIVE
+============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: #f5f5f5;
+  color: #111;
+}
+
+/* ============================================
+   MAIN CONTAINER
+============================================ */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  background: #fff;
+
+  overflow-x: hidden;
+}
+
+/* ============================================
+   GREEN SUCCESS HEADER
+============================================ */
+
+.top-green {
+  width: 100%;
+
+  min-height: 180px;
+  height: clamp(160px, 25vh, 240px);
+
+  background: #37b24d;
+
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+
+  padding-bottom: clamp(30px, 5vh, 45px);
+}
+
+/* ============================================
+   CHECK CIRCLE
+============================================ */
+
+.check-circle {
+  width: clamp(75px, 22vw, 110px);
+  height: clamp(75px, 22vw, 110px);
+
+  background: #37b24d;
+
+  border: clamp(4px, 1vw, 6px) solid #fff;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+  flex-shrink: 0;
+}
+
+.check-circle i {
+  font-size: clamp(35px, 10vw, 55px);
+
+  color: #fff;
+}
+
+/* ============================================
+   CONTENT CARD
+============================================ */
+
+.card {
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: -20px auto 0;
+
+  background: #fff;
+
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  padding: clamp(25px, 5vw, 40px) clamp(18px, 5vw, 50px) 40px;
+}
+
+/* ============================================
+   TITLE
+============================================ */
+
+.card h1 {
+  text-align: center;
+
+  font-size: clamp(25px, 7vw, 38px);
+
+  line-height: 1.2;
+
+  margin-bottom: 10px;
+}
+
+.card p {
+  text-align: center;
+
+  color: #777;
+
+  font-size: clamp(14px, 4vw, 17px);
+
+  line-height: 1.5;
+}
+
+/* ============================================
+   AMOUNT
+============================================ */
+
+.card h2 {
+  text-align: center;
+
+  margin: 15px 0 30px;
+
+  font-size: clamp(28px, 9vw, 42px);
+
+  line-height: 1.2;
+
+  color: #111;
+
+  overflow-wrap: anywhere;
+}
+
+/* ============================================
+   RECEIPT
+============================================ */
+
+.receipt {
+  width: 100%;
+
+  border: 1px solid #eee;
+
+  border-radius: 18px;
+
+  padding: clamp(15px, 4vw, 25px);
+
+  margin-bottom: 30px;
+
+  background: #fff;
+}
+
+/* ============================================
+   RECEIPT ITEM
+============================================ */
+
+.item {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid #eee;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+/* Label */
+.item span {
+  color: #777;
+
+  font-size: clamp(13px, 3.5vw, 15px);
+
+  flex-shrink: 0;
+}
+
+/* Value */
+.item strong {
+  text-align: right;
+
+  font-size: clamp(13px, 3.5vw, 16px);
+
+  max-width: 65%;
+
+  overflow-wrap: anywhere;
+}
+
+/* ============================================
+   BUTTON BASE
+============================================ */
+
+.home,
+.details {
+  width: 100%;
+
+  min-height: 55px;
+
+  border-radius: 14px;
+
+  font-size: clamp(15px, 4vw, 18px);
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.home:active,
+.details:active {
+  transform: scale(0.98);
+}
+
+/* ============================================
+   HOME BUTTON
+============================================ */
+
+.home {
+  background: #ffc107;
+
+  border: none;
+
+  color: #111;
+
+  margin-bottom: 15px;
+}
+
+.home:hover {
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.25);
+}
+
+/* ============================================
+   DETAILS BUTTON
+============================================ */
+
+.details {
+  background: #fff;
+
+  border: 2px solid #ddd;
+
+  color: #333;
+}
+
+.details:hover {
+  border-color: #ffc107;
+}
+
+/* ============================================
+   SMALL PHONES
+   320px - 359px
+============================================ */
+
+@media (max-width: 359px) {
+  .top-green {
+    height: 160px;
+
+    padding-bottom: 25px;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .card {
+    padding: 22px 14px 30px;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+  .card h1 {
+    font-size: 25px;
+  }
+
+  .card h2 {
+    font-size: 28px;
+
+    margin-bottom: 25px;
+  }
+
+  .receipt {
+    padding: 12px 15px;
+  }
+
+  .item {
+    gap: 10px;
+
+    padding: 14px 0;
+  }
+
+  .item strong {
+    max-width: 60%;
+  }
+
+  .home,
+  .details {
+    min-height: 50px;
+  }
+}
+
+/* ============================================
+   NORMAL PHONES
+   360px - 599px
+============================================ */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .card {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+/* ============================================
+   LARGE PHONES / SMALL TABLETS
+   600px - 767px
+============================================ */
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .card {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .receipt {
+    padding: 20px 25px;
+  }
+}
+
+/* ============================================
+   TABLETS
+   768px - 1023px
+============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background: #f5f5f5;
+  }
+
+  .container {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  }
+
+  .top-green {
+    height: 210px;
+  }
+
+  .card {
+    padding: 35px 60px 50px;
+  }
+
+  .receipt {
+    padding: 25px 30px;
+  }
+}
+
+/* ============================================
+   LAPTOP / DESKTOP
+   1024px+
+============================================ */
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background: #f5f5f5;
+  }
+
+  .container {
+    width: 100%;
+
+    max-width: 900px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .top-green {
+    height: 220px;
+  }
+
+  .card {
+    padding: 40px 70px 50px;
+  }
+
+  .receipt {
+    padding: 25px 30px;
+  }
+}
+
+/* ============================================
+   VERY LARGE DESKTOP
+   1400px+
+============================================ */
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 950px;
+  }
+
+  .card {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+/* ============================================
+   LANDSCAPE PHONES
+============================================ */
+
+@media (max-height: 550px) and (orientation: landscape) {
+  .top-green {
+    height: 140px;
+
+    min-height: 140px;
+
+    padding-bottom: 20px;
+  }
+
+  .check-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .check-circle i {
+    font-size: 35px;
+  }
+
+  .card {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  .card h1 {
+    font-size: 25px;
+  }
+
+  .card h2 {
+    font-size: 28px;
+
+    margin-bottom: 20px;
+  }
+
+  .receipt {
+    margin-bottom: 20px;
+  }
+
+  .item {
+    padding: 12px 0;
+  }
+
+  .home,
+  .details {
+    min-height: 48px;
+  }
+}
+
+/* ============================================
+   SAFE AREA
+============================================ */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .card {
+    padding-bottom: calc(clamp(30px, 5vw, 50px) + env(safe-area-inset-bottom));
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

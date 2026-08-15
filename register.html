@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+
+    <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="theme-color" content="#ffc107" />
+  </head>
+  <body>
+    <!-- =========================================
+     FAST MTN CUSTOM ALERT
+========================================= -->
+
+    <div id="alertBox" class="alert-box"></div>
+    <!-- =====================================
+     FAST MTN PAGE LOADER
+===================================== -->
+    <div id="pageLoader">
+      <div class="loaderWrapper">
+        <!-- Rotating border -->
+        <div class="loaderBorder"></div>
+
+        <!-- Logo stays still -->
+        <img src="logo.png" alt="Fast MTN" class="loaderLogo" />
+      </div>
+    </div>
+
+    <div class="phone">
+      <div class="header">
+        <a href="onboarding.html">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+      </div>
+
+      <div class="content">
+        <h2>Create Your Account</h2>
+
+        <p class="subtitle">Fill in your details to get started.</p>
+
+        <form id="registerForm">
+          <div class="input-box">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Full Name" required />
+          </div>
+
+          <div class="input-box">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="MTN Phone Number"
+              required
+            />
+          </div>
+
+          <div class="input-box password-box">
+            <label for="password">Create Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Create Password"
+              required
+            />
+
+            <i class="fa-solid fa-eye toggle-password"></i>
+          </div>
+
+          <div class="input-box password-box">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Confirm Password"
+              required
+            />
+
+            <i class="fa-solid fa-eye toggle-password"></i>
+          </div>
+
+          <button type="submit" data-no-loader="true">Create Account</button>
+        </form>
+
+        <div class="bottom-text">
+          Already have an account?
+          <a href="login.html">Login</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

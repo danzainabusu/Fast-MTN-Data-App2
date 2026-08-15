@@ -1,0 +1,826 @@
+/* ============================================
+   FAST MTN DATA - NOTIFICATION SETTINGS
+   FULL RESPONSIVE DESIGN
+============================================ */
+
+/* ============================================
+   RESET
+============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #111;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   MAIN CONTAINER
+============================================ */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+/* ============================================
+   HEADER
+============================================ */
+
+.header {
+  width: 100%;
+
+  min-height: 80px;
+
+  background: #ffc107;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 15px 20px;
+
+  position: relative;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+   BACK BUTTON
+============================================ */
+
+.header a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+
+  color: #000;
+
+  text-decoration: none;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.header a:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.header a:active {
+  transform: scale(0.92);
+}
+
+/* ============================================
+   HEADER TITLE
+============================================ */
+
+.header h2 {
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: calc(100% - 120px);
+
+  text-align: center;
+
+  font-size: 21px;
+
+  line-height: 1.3;
+
+  overflow-wrap: anywhere;
+}
+
+/* ============================================
+   SETTINGS CARD
+============================================ */
+
+.card {
+  width: calc(100% - 40px);
+
+  max-width: 700px;
+
+  margin: 20px auto;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+   SETTINGS ITEM
+============================================ */
+
+.item {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+/* ============================================
+   LEFT CONTENT
+============================================ */
+
+.left {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+/* ============================================
+   ICON
+============================================ */
+
+.left i {
+  width: 40px;
+
+  min-width: 40px;
+
+  font-size: 22px;
+
+  color: #ffc107;
+
+  text-align: center;
+
+  flex-shrink: 0;
+}
+
+/* ============================================
+   TEXT
+============================================ */
+
+.left h3 {
+  font-size: 17px;
+
+  margin-bottom: 5px;
+
+  line-height: 1.3;
+
+  overflow-wrap: anywhere;
+}
+
+.left p {
+  font-size: 13px;
+
+  color: #777;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+/* ============================================
+   SWITCH
+============================================ */
+
+.switch {
+  position: relative;
+
+  display: inline-block;
+
+  width: 55px;
+  height: 30px;
+
+  min-width: 55px;
+
+  flex-shrink: 0;
+}
+
+/* ============================================
+   HIDE CHECKBOX
+============================================ */
+
+.switch input {
+  position: absolute;
+
+  opacity: 0;
+
+  width: 0;
+  height: 0;
+}
+
+/* ============================================
+   SLIDER
+============================================ */
+
+.slider {
+  position: absolute;
+
+  cursor: pointer;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: #ccc;
+
+  border-radius: 30px;
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* ============================================
+   SWITCH CIRCLE
+============================================ */
+
+.slider:before {
+  content: "";
+
+  position: absolute;
+
+  width: 24px;
+  height: 24px;
+
+  left: 3px;
+  top: 3px;
+
+  background: #fff;
+
+  border-radius: 50%;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease;
+}
+
+/* ============================================
+   ACTIVE SWITCH
+============================================ */
+
+input:checked + .slider {
+  background: #ffc107;
+
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.12);
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+/* ============================================
+   KEYBOARD ACCESSIBILITY
+============================================ */
+
+.switch input:focus-visible + .slider {
+  outline: 3px solid rgba(255, 193, 7, 0.35);
+
+  outline-offset: 3px;
+}
+
+/* ============================================
+   VERY SMALL PHONES
+   320px - 359px
+============================================ */
+
+@media (max-width: 359px) {
+  .header {
+    min-height: 70px;
+
+    padding: 12px 10px;
+  }
+
+  .header a {
+    width: 38px;
+    height: 38px;
+
+    font-size: 20px;
+  }
+
+  .header h2 {
+    width: calc(100% - 90px);
+
+    font-size: 18px;
+  }
+
+  .card {
+    width: calc(100% - 24px);
+
+    margin: 12px auto;
+
+    border-radius: 16px;
+  }
+
+  .item {
+    padding: 14px 12px;
+
+    gap: 8px;
+  }
+
+  .left {
+    gap: 9px;
+  }
+
+  .left i {
+    width: 32px;
+    min-width: 32px;
+
+    font-size: 19px;
+  }
+
+  .left h3 {
+    font-size: 14px;
+  }
+
+  .left p {
+    font-size: 11px;
+  }
+
+  .switch {
+    width: 48px;
+    height: 27px;
+
+    min-width: 48px;
+  }
+
+  .slider:before {
+    width: 21px;
+    height: 21px;
+
+    left: 3px;
+    top: 3px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(21px);
+  }
+}
+
+/* ============================================
+   SMALL PHONES
+   360px - 374px
+============================================ */
+
+@media (min-width: 360px) and (max-width: 374px) {
+  .header {
+    min-height: 75px;
+
+    padding: 14px 12px;
+  }
+
+  .header h2 {
+    font-size: 19px;
+
+    width: calc(100% - 100px);
+  }
+
+  .card {
+    width: calc(100% - 28px);
+
+    margin: 14px auto;
+
+    border-radius: 17px;
+  }
+
+  .item {
+    padding: 16px 14px;
+  }
+
+  .left {
+    gap: 11px;
+  }
+
+  .left i {
+    width: 35px;
+    min-width: 35px;
+
+    font-size: 20px;
+  }
+
+  .left h3 {
+    font-size: 15px;
+  }
+
+  .left p {
+    font-size: 12px;
+  }
+}
+
+/* ============================================
+   NORMAL PHONES
+   375px - 599px
+============================================ */
+
+@media (min-width: 375px) and (max-width: 599px) {
+  .header {
+    min-height: 80px;
+
+    padding: 15px;
+  }
+
+  .header h2 {
+    font-size: 20px;
+
+    width: calc(100% - 110px);
+  }
+
+  .card {
+    width: calc(100% - 32px);
+
+    margin: 16px auto;
+
+    border-radius: 18px;
+  }
+
+  .item {
+    padding: 18px 16px;
+  }
+
+  .left {
+    gap: 13px;
+  }
+
+  .left i {
+    width: 38px;
+    min-width: 38px;
+
+    font-size: 21px;
+  }
+
+  .left h3 {
+    font-size: 16px;
+  }
+
+  .left p {
+    font-size: 12px;
+  }
+}
+
+/* ============================================
+   LARGE PHONES
+   600px - 767px
+============================================ */
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .header {
+    min-height: 90px;
+
+    padding: 18px 25px;
+  }
+
+  .header h2 {
+    font-size: 23px;
+
+    width: calc(100% - 140px);
+  }
+
+  .card {
+    width: calc(100% - 50px);
+
+    max-width: 650px;
+
+    margin: 25px auto;
+
+    border-radius: 20px;
+  }
+
+  .item {
+    padding: 20px;
+  }
+
+  .left {
+    gap: 16px;
+  }
+
+  .left i {
+    width: 42px;
+    min-width: 42px;
+
+    font-size: 23px;
+  }
+
+  .left h3 {
+    font-size: 18px;
+  }
+
+  .left p {
+    font-size: 14px;
+  }
+}
+
+/* ============================================
+   TABLETS
+   768px - 1023px
+============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .app {
+    width: 100%;
+
+    max-width: 850px;
+
+    min-height: 100vh;
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .header {
+    min-height: 95px;
+
+    padding: 20px 30px;
+  }
+
+  .header h2 {
+    font-size: 25px;
+
+    width: calc(100% - 160px);
+  }
+
+  .card {
+    width: calc(100% - 60px);
+
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    border-radius: 22px;
+  }
+
+  .item {
+    padding: 22px 24px;
+  }
+
+  .left {
+    gap: 18px;
+  }
+
+  .left i {
+    width: 45px;
+    min-width: 45px;
+
+    font-size: 24px;
+  }
+
+  .left h3 {
+    font-size: 19px;
+  }
+
+  .left p {
+    font-size: 14px;
+  }
+
+  .switch {
+    width: 58px;
+    height: 32px;
+
+    min-width: 58px;
+  }
+
+  .slider:before {
+    width: 26px;
+    height: 26px;
+
+    left: 3px;
+    top: 3px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+}
+
+/* ============================================
+   DESKTOP
+   1024px+
+============================================ */
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .app {
+    width: 100%;
+
+    max-width: 1100px;
+
+    min-height: 100vh;
+
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.06);
+  }
+
+  .header {
+    min-height: 100px;
+
+    padding: 20px 35px;
+  }
+
+  .header h2 {
+    font-size: 27px;
+  }
+
+  .card {
+    max-width: 750px;
+
+    margin: 35px auto;
+
+    border-radius: 22px;
+  }
+
+  .item {
+    padding: 23px 25px;
+  }
+
+  .left {
+    gap: 20px;
+  }
+
+  .left i {
+    width: 46px;
+    min-width: 46px;
+
+    font-size: 25px;
+  }
+
+  .left h3 {
+    font-size: 20px;
+  }
+
+  .left p {
+    font-size: 14px;
+  }
+
+  .switch {
+    width: 58px;
+    height: 32px;
+
+    min-width: 58px;
+  }
+
+  .slider:before {
+    width: 26px;
+    height: 26px;
+
+    left: 3px;
+    top: 3px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+}
+
+/* ============================================
+   VERY LARGE SCREENS
+   1400px+
+============================================ */
+
+@media (min-width: 1400px) {
+  .app {
+    max-width: 1200px;
+  }
+
+  .header {
+    min-height: 105px;
+  }
+
+  .header h2 {
+    font-size: 29px;
+  }
+
+  .card {
+    max-width: 800px;
+  }
+
+  .item {
+    padding: 25px 28px;
+  }
+}
+
+/* ============================================
+   LANDSCAPE PHONES
+============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .header {
+    min-height: 65px;
+
+    padding: 10px 20px;
+  }
+
+  .header a {
+    width: 36px;
+    height: 36px;
+
+    font-size: 19px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  .card {
+    margin: 12px auto;
+  }
+
+  .item {
+    padding: 13px 16px;
+  }
+
+  .left {
+    gap: 10px;
+  }
+
+  .left i {
+    font-size: 19px;
+  }
+
+  .left h3 {
+    font-size: 15px;
+  }
+
+  .left p {
+    font-size: 11px;
+  }
+}
+
+/* ============================================
+   TOUCH DEVICES
+============================================ */
+
+@media (hover: none) {
+  .header a:hover {
+    background: transparent;
+  }
+
+  .header a:active {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+
+    animation: none !important;
+  }
+}
