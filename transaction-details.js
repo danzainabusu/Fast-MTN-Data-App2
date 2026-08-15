@@ -422,7 +422,7 @@ setInterval(() => {
 ========================================= */
 
 function reportIssue() {
-  alert("Your issue report feature will be connected to Support.");
+  window.location.href="report-problem.html";
 }
 
 /* =========================================
@@ -457,7 +457,7 @@ Date: ${selectedTransaction.date || "-"}
     try {
       await navigator.clipboard.writeText(text);
 
-      alert("Receipt copied to clipboard.");
+      showAlert("Receipt copied to clipboard.");
     } catch (error) {
       alert(text);
     }
