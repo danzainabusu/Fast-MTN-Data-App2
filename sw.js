@@ -1,4 +1,4 @@
-const CACHE_NAME = "fast-mtn-v1";
+const CACHE_NAME = "fast-mtn-v2";
 
 const FILES_TO_CACHE = [
   "./",
